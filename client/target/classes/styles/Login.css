@@ -22,18 +22,10 @@
     -fx-opacity: 0.5;
 }
 
-#borderPane {
-    -fx-background-color: #16161C;
-    -fx-background-image: url("../images/background.png");
-    -fx-background-position: center;
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: cover;
-}
-
 #connectBtn{
     -fx-color: #ffffff;
     -fx-padding: 5px 20px;
-    -fx-background-color: linear-gradient(to left, #F29682, #EE69AC, #CB4BCF);
+    -fx-background-color: linear-gradient(to bottom, #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%);
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-font-size: 12px;
     border-radius: 3px;
@@ -50,20 +42,7 @@
     -fx-padding: 5px 20px;
     -fx-spacing: 10px;
     -fx-start-margin: 10px;
-    -fx-background-color: linear-gradient(to left, #F29682, #EE69AC, #CB4BCF);
+    -fx-background-color: linear-gradient(to bottom, #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%);
     -fx-font-family: 'Open Sans', sans-serif;
     -fx-cursor: hand;
 }
-
-.label {
-    -fx-text-fill: #FFFFFF;
-    -fx-font-family: "Inter Semi Bold";
-}
-
-.text-field {
-    -fx-background-color: #1E1E26;
-    -fx-text-fill: #FFFFFF;
-    -fx-font-family: "Inter Semi Bold";
-    -fx-font-size: 14;
-}
-

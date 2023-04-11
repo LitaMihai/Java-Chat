@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality.">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/close_normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/microphone-active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/microphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ButtonStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ChatView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ComboBox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ListViewStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/apis/slf4j-api-2.0.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/exception/DuplicateUsernameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/com/example/server/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/module-info.class" afterDir="false" />
-    </list>
+    <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,27 +58,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java-Chat/server/apis/slf4j-jdk14-2.0.7.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "/Users/mihailita/Documents/Java-Chat",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\Java-Chat\client\src\main\java\com\client\chatwindow" />
@@ -166,6 +121,7 @@
       <workItem from="1679753342993" duration="138000" />
       <workItem from="1679931966094" duration="1290000" />
       <workItem from="1679935205391" duration="52000" />
+      <workItem from="1681201992413" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality.">
       <created>1679216575483</created>

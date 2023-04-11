@@ -17,18 +17,20 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Server {
+
+    /* Setting up variables */
     private static final int PORT = 9001;
     private static final HashMap<String, User> names = new HashMap<>();
-    static HashSet<ObjectOutputStream> writers = new HashSet<>();
+    private static HashSet<ObjectOutputStream> writers = new HashSet<>();
     private static ArrayList<User> users = new ArrayList<>();
     static Logger logger = LoggerFactory.getLogger(Server.class);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         logger.info("The chat server is running.");
         ServerSocket listener = new ServerSocket(PORT);
 
-        try{
-            while(true) {
+        try {
+            while (true) {
                 new Handler(listener.accept()).start();
             }
         } catch (Exception e) {
@@ -37,6 +39,8 @@ public class Server {
             listener.close();
         }
     }
+
+
     private static class Handler extends Thread {
         private String name;
         private Socket socket;
@@ -87,14 +91,15 @@ public class Server {
                 }
             } catch (SocketException socketException) {
                 logger.error("Socket Exception for user " + name);
-            } catch (DuplicateUsernameException duplicateException) {
+            } catch (DuplicateUsernameException duplicateException){
                 logger.error("Duplicate Username : " + name);
-            } catch (Exception e) {
+            } catch (Exception e){
                 logger.error("Exception in run() method for user: " + name, e);
             } finally {
                 closeConnections();
             }
         }
+
         private Message changeStatus(Message inputmsg) throws IOException {
             logger.debug(inputmsg.getName() + " has changed status to  " + inputmsg.getStatus());
             Message msg = new Message();
@@ -143,7 +148,7 @@ public class Server {
             msg.setMsg("has left the chat.");
             msg.setType(MessageType.DISCONNECTED);
             msg.setName("SERVER");
-            msg.setUserList(names);
+            msg.setUserlist(names);
             write(msg);
             logger.debug("removeFromList() method Exit");
             return msg;
@@ -166,7 +171,7 @@ public class Server {
          */
         private void write(Message msg) throws IOException {
             for (ObjectOutputStream writer : writers) {
-                msg.setUserList(names);
+                msg.setUserlist(names);
                 msg.setUsers(users);
                 msg.setOnlineCount(names.size());
                 writer.writeObject(msg);
