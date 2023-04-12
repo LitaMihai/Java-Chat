@@ -1,53 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="unnamed" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality.">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/close_normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/microphone-active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/microphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ButtonStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ChatView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ComboBox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ListViewStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/apis/slf4j-api-2.0.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/exception/DuplicateUsernameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-media-18-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-media-18.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-console-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-console-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-datetime-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-debug-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-errorhandling-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-file-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-file-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-file-l2-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-handle-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-heap-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-interlocked-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-libraryloader-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-localization-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-memory-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-namedpipe-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-processenvironment-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-processthreads-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-processthreads-l1-1-1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-profile-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-string-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-synch-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-synch-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-sysinfo-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-timezone-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-util-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-conio-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-convert-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-environment-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-filesystem-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-heap-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-locale-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-math-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-multibyte-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-private-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-process-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-runtime-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-stdio-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-string-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-time-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-utility-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/decora_sse.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/fxplugins.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/glass.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/glib-lite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/gstreamer-lite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/javafx_font.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/javafx_iio.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/jfxmedia.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/jfxwebkit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/msvcp140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/msvcp140_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/msvcp140_2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/prism_common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/prism_d3d.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/prism_sw.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/ucrtbase.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/vcruntime140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/vcruntime140_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.base/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.base/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.base/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.controls/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.controls/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.fxml/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.fxml/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/jpeg_fx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/directshow.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/glib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/gstreamer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/libffi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.swing/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.swing/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/icu_web.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/libxml2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/libxslt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/webkit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx-swt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.base.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.controls.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.fxml.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.graphics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.media.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.swing.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.web.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/javafx-sdk-20/src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/slf4j-api-2.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis/slf4j-jdk14-2.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoiceUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/Bubble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/BubbleSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/BubbledLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/AnimationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/AnimationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/FadeAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/PopupAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/SlideAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/TrayAnimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/models/CustomStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/models/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/notification/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/notification/TrayNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/resources/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/resources/error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/resources/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/resources/notice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/resources/success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/resources/warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/dominic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/fxchat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/plug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/sarah.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/sound.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/slf4j_api_2_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/slf4j_jdk14_2_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/login/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/MainLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/cross.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/images/cross.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/line.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/images/line.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/styles/ButtonStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ButtonStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/styles/ComboBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ComboBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/styles/ListViewStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ListViewStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/styles/Login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/chatwindow/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/client/chatwindow/ChatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/client/login/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/example/client/HelloApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/example/client/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/example/client/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/images/cross.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/images/cross.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/images/line.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/images/line.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/styles/ListViewStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/styles/ListViewStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/styles/Login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/server/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/LoginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apis/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apis/slf4j-jdk14-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/messages/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/com/example/server/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/server/HelloApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/server/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/example/server/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/messages/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/messages/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/messages/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/messages/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server$Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server$Handler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,9 +199,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -103,42 +244,84 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java-Chat/server/apis/slf4j-jdk14-2.0.7.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path": "D:\\Projects\\Java-Chat\\apis",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "D:/Projects/Java-Chat/apis/slf4j-api-2.0.7.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2839721",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Java-Chat\client\src\main\resources\views" />
       <recent name="D:\Projects\Java-Chat\client\src\main\java\com\client\chatwindow" />
       <recent name="D:\Projects\Java-Chat\client\src\main\resources\images" />
       <recent name="D:\Projects\Java-Chat\client\src\main\resources\styles" />
       <recent name="D:\Projects\Java-Chat\client\src\main\java\com\client\util" />
-      <recent name="D:\Projects\Java-Chat\client\src\main\java\com\client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Java-Chat\client\src\main\resources\views" />
       <recent name="D:\Projects\Java-Chat\client\src\main\java\com\client\login" />
       <recent name="D:\Projects\Java-Chat\client\src\main\resources" />
       <recent name="D:\Projects\Java-Chat\client\src\main\resources\com\views" />
       <recent name="D:\Projects\Java-Chat\client\src\main\resources\com\client.login" />
-      <recent name="D:\Projects\Java-Chat\client\src\main\resources\com" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Instance_1">
+    <configuration name="Instance_1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.client.login.MainLauncher" />
+      <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Instance_2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.client.login.MainLauncher" />
+      <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Instance_3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.client.login.MainLauncher" />
+      <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.server.Server" />
+      <module name="server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Instance_1" />
+      <item itemvalue="Application.Instance_2" />
+      <item itemvalue="Application.Instance_3" />
+      <item itemvalue="Application.Server" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -166,6 +349,13 @@
       <workItem from="1679753342993" duration="138000" />
       <workItem from="1679931966094" duration="1290000" />
       <workItem from="1679935205391" duration="52000" />
+      <workItem from="1681205603795" duration="34000" />
+      <workItem from="1681205751776" duration="61000" />
+      <workItem from="1681205890465" duration="850000" />
+      <workItem from="1681206816256" duration="2030000" />
+      <workItem from="1681291290101" duration="3484000" />
+      <workItem from="1681295065426" duration="135000" />
+      <workItem from="1681295224617" duration="7529000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality.">
       <created>1679216575483</created>

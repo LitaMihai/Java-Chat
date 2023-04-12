@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.client.login.MainLauncher
+Class-Path: javafx-controls-19-win.jar javafx-controls-19.jar javafx-fxm
+ l-19.jar javafx-base-19-win.jar javafx-fxml-19-win.jar javafx-base-19.j
+ ar slf4j-api-1.7.25.jar javafx-graphics-19.jar javafx-graphics-19-win.j
+ ar
+

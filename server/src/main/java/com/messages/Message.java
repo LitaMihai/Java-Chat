@@ -14,7 +14,6 @@ public class Message implements Serializable {
     private ArrayList<User> users;
     private Status status;
     private byte[] voiceMsg;
-    private String picture;
 
     public String getName(){
         return this.name;
@@ -86,15 +85,5 @@ public class Message implements Serializable {
     public void setVoiceMsg(byte[] voiceMsg){
         if(voiceMsg != null)
             this.voiceMsg = voiceMsg;
-    }
-
-    public String getPicture(){
-        return this.picture;
-    }
-
-    public void setPicture(String picture){
-        if(picture.isEmpty() == false)
-            this.picture = picture;
-
     }
 }

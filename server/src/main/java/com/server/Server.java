@@ -114,7 +114,6 @@ public class Server {
                 user = new User();
                 user.setName(firstMessage.getName());
                 user.setStatus(Status.ONLINE);
-                user.setPicture(firstMessage.getPicture());
 
                 users.add(user);
                 names.put(name, user);
@@ -131,7 +130,6 @@ public class Server {
             msg.setMsg("has joined the chat.");
             msg.setType(MessageType.NOTIFICATION);
             msg.setName(firstMessage.getName());
-            msg.setPicture(firstMessage.getPicture());
             write(msg);
             return msg;
         }

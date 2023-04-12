@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jlink" name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="root">
+      <element id="module-output" name="client" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+    </root>
+  </artifact>
+</component>

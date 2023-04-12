@@ -19,7 +19,7 @@ public class MainLauncher extends Application {
         MainLauncher.primaryStageObj = primaryStage;
         Parent root = FXMLLoader.load(this.getClass().getResource("/views/LoginView.fxml"));
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setTitle("Socket Chat : Client Version 0.1");
+        primaryStage.setTitle("Socket Chat : Client Version 0.5");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/images/icon.png").toString()));
         Scene mainScene = new Scene(root, 350, 420);
         mainScene.setRoot(root);

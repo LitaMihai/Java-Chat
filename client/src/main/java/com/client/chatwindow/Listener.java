@@ -15,8 +15,6 @@ import static com.messages.MessageType.CONNECTED;
 public class Listener implements Runnable{
 
     private static final String HASCONNECTED = "has connected";
-
-    private static String picture;
     private Socket socket;
     public String hostname;
     public int port;
@@ -28,11 +26,10 @@ public class Listener implements Runnable{
     private OutputStream outputStream;
     Logger logger = LoggerFactory.getLogger(Listener.class);
 
-    public Listener(String hostname, int port, String username, String picture, ChatController controller) {
+    public Listener(String hostname, int port, String username, ChatController controller) {
         this.hostname = hostname;
         this.port = port;
         Listener.username = username;
-        Listener.picture = picture;
         this.controller = controller;
     }
 
@@ -99,7 +96,6 @@ public class Listener implements Runnable{
         createMessage.setType(MessageType.USER);
         createMessage.setStatus(Status.AWAY);
         createMessage.setMsg(msg);
-        createMessage.setPicture(picture);
         oos.writeObject(createMessage);
         oos.flush();
     }
@@ -113,7 +109,6 @@ public class Listener implements Runnable{
         createMessage.setType(MessageType.VOICE);
         createMessage.setStatus(Status.AWAY);
         createMessage.setVoiceMsg(audio);
-        createMessage.setPicture(picture);
         oos.writeObject(createMessage);
         oos.flush();
     }
@@ -126,7 +121,6 @@ public class Listener implements Runnable{
         createMessage.setName(username);
         createMessage.setType(MessageType.STATUS);
         createMessage.setStatus(status);
-        createMessage.setPicture(picture);
         oos.writeObject(createMessage);
         oos.flush();
     }
@@ -137,7 +131,6 @@ public class Listener implements Runnable{
         createMessage.setName(username);
         createMessage.setType(CONNECTED);
         createMessage.setMsg(HASCONNECTED);
-        createMessage.setPicture(picture);
         oos.writeObject(createMessage);
     }
 
