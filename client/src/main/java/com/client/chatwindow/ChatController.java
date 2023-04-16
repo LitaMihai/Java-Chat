@@ -103,7 +103,7 @@ public class ChatController implements Initializable {
                 profileImage.setFitWidth(32);
                 BubbledLabel bl6 = new BubbledLabel();
                 if (msg.getType() == MessageType.VOICE){
-                    ImageView imageview = new ImageView(new Image(getClass().getClassLoader().getResource("images/sound.png").toString()));
+                    ImageView imageview = new ImageView(new Image(getClass().getResource("/images/sound.png").toString()));
                     bl6.setGraphic(imageview);
                     bl6.setText("Sent a voice message!");
                     VoicePlayback.playAudio(msg.getVoiceMsg());
@@ -131,10 +131,9 @@ public class ChatController implements Initializable {
                 ImageView profileImage = new ImageView(image);
                 profileImage.setFitHeight(32);
                 profileImage.setFitWidth(32);
-
                 BubbledLabel bl6 = new BubbledLabel();
                 if (msg.getType() == MessageType.VOICE){
-                    bl6.setGraphic(new ImageView(new Image(getClass().getClassLoader().getResource("images/sound.png").toString())));
+                    bl6.setGraphic(new ImageView(new Image(getClass().getResource("/images/sound.png").toString())));
                     bl6.setText("Sent a voice message!");
                     VoicePlayback.playAudio(msg.getVoiceMsg());
                 }else {

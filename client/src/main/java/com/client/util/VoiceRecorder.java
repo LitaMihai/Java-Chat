@@ -18,7 +18,8 @@ public class VoiceRecorder extends VoiceUtil {
         try {
             final AudioFormat format = getAudioFormat();
             DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
-            final TargetDataLine line = (TargetDataLine) AudioSystem.getLine(info);
+            //final TargetDataLine line = (TargetDataLine) AudioSystem.getLine(info);
+            final TargetDataLine line = AudioSystem.getTargetDataLine(format);
             line.open(format);
             line.start();
             Runnable runner = new Runnable() {

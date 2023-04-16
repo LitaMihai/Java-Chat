@@ -24,13 +24,21 @@ public class VoiceUtil {
      * Defines an audio format
      */
     static AudioFormat getAudioFormat() {
-        float sampleRate = 16000;
-        int sampleSizeInBits = 8;
-        int channels = 2;
+//        float sampleRate = 16000;
+//        int sampleSizeInBits = 8;
+//        int channels = 2;
+//        boolean signed = true;
+//        boolean bigEndian = true;
+
+        float sampleRate = 8000;
+        int sampleSizeInBits = 16;
+        int channels = 1;
         boolean signed = true;
-        boolean bigEndian = true;
+        boolean bigEndian = false;
+
         AudioFormat format = new AudioFormat(sampleRate, sampleSizeInBits,
                 channels, signed, bigEndian);
+
         return format;
     }
 }
