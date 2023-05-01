@@ -2,13 +2,12 @@ package com.client.login;
 
 import com.client.chatwindow.ChatController;
 import com.client.chatwindow.Listener;
+import com.client.util.Database;
 import com.client.util.ResizeHelper;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -24,6 +24,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,15 +34,17 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
     @FXML private ImageView Defaultview;
-    @FXML public  TextField hostnameTextfield;
-    @FXML private TextField portTextfield;
-    @FXML private TextField usernameTextfield;
+    @FXML public  TextField hostnameTextField;
+    @FXML private TextField portTextField;
+    @FXML private TextField emailTextField;
+    @FXML private PasswordField passwordTextField;
     public static ChatController con;
     @FXML private BorderPane borderPane;
     private double xOffset;
     private double yOffset;
     private Scene scene;
-
+    String username;
+    Logger logger = LoggerFactory.getLogger(Listener.class);
     private static LoginController instance;
 
     public LoginController() {
@@ -51,9 +55,18 @@ public class LoginController implements Initializable {
         return instance;
     }
     public void loginButtonAction() throws IOException {
-        String hostname = hostnameTextfield.getText();
-        int port = Integer.parseInt(portTextfield.getText());
-        String username = usernameTextfield.getText();
+        String hostname = hostnameTextField.getText();
+        int port = Integer.parseInt(portTextField.getText());
+        String email = emailTextField.getText();
+        username = Database.getName(email); // Get the username from the database
+        String password = passwordTextField.getText();
+
+        // Account verification
+        if(!Database.getAccount(email, password)){ // If the account does not exist
+            LoginController.getInstance().showErrorDialog("Email or password is incorrect");
+            logger.error("Wrong Account");
+            return;
+        }
 
         FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("/views/ChatView.fxml"));
         Parent window = (Pane) fmxlLoader.load();
@@ -64,9 +77,28 @@ public class LoginController implements Initializable {
         this.scene = new Scene(window);
     }
 
+    public void registerButtonAction(){
+        Platform.runLater(() -> {
+            FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("/views/RegisterView.fxml"));
+            Parent window = null;
+            try {
+                window = (Pane) fmxlLoader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Stage stage = MainLauncher.getPrimaryStage();
+            Scene scene = new Scene(window);
+            stage.setMaxWidth(350);
+            stage.setMaxHeight(420);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.centerOnScreen();
+        });
+    }
+
     public void showScene() throws IOException {
         Platform.runLater(() -> {
-            Stage stage = (Stage) hostnameTextfield.getScene().getWindow();
+            Stage stage = (Stage) hostnameTextField.getScene().getWindow();
             stage.setResizable(true);
             stage.setWidth(1040);
             stage.setHeight(620);
@@ -80,13 +112,12 @@ public class LoginController implements Initializable {
             stage.setMinHeight(300);
             ResizeHelper.addResizeListener(stage);
             stage.centerOnScreen();
-            con.setUsernameLabel(usernameTextfield.getText());
+            con.setUsernameLabel(username);
         });
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         /* Drag and Drop */
         borderPane.setOnMousePressed(event -> {
             xOffset = MainLauncher.getPrimaryStage().getX() - event.getScreenX();
@@ -97,13 +128,21 @@ public class LoginController implements Initializable {
         borderPane.setOnMouseDragged(event -> {
             MainLauncher.getPrimaryStage().setX(event.getScreenX() + xOffset);
             MainLauncher.getPrimaryStage().setY(event.getScreenY() + yOffset);
-
         });
 
         borderPane.setOnMouseReleased(event -> {
             borderPane.setCursor(Cursor.DEFAULT);
         });
 
+        emailTextField.setOnKeyPressed(event -> {
+            if(event.getCode() == KeyCode.TAB)
+                passwordTextField.requestFocus();
+        });
+
+        passwordTextField.setOnKeyPressed(event -> {
+            if(event.getCode() == KeyCode.TAB)
+                emailTextField.requestFocus();
+        });
 
         int numberOfSquares = 30;
         while (numberOfSquares > 0){
@@ -111,7 +150,6 @@ public class LoginController implements Initializable {
             numberOfSquares--;
         }
     }
-
 
     /* This method is used to generate the animation on the login window, It will generate random ints to determine
      * the size, speed, starting points and direction of each square.
@@ -191,12 +229,88 @@ public class LoginController implements Initializable {
     /* This displays an alert message to the user */
     public void showErrorDialog(String message) {
         Platform.runLater(()-> {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Warning!");
-            alert.setHeaderText(message);
-            alert.setContentText("Please check for firewall issues and check if the server is running.");
-            alert.showAndWait();
-        });
+            Alert alert;
+            switch(message){
+                case "Could not connect to server":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please check for firewall issues and check if the server is running.");
+                    alert.showAndWait();
+                    break;
 
+                case "Email or password is incorrect":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please check the email and password you have entered.");
+                    alert.showAndWait();
+                    break;
+
+                case "Email already used":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please use another email address.");
+                    alert.showAndWait();
+                    break;
+
+                case "Email text field empty":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please enter an email address.");
+                    alert.showAndWait();
+                    break;
+
+                case "Password text field empty":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please enter a password.");
+                    alert.showAndWait();
+                    break;
+
+                case "Display name text field empty":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please enter a name.");
+                    alert.showAndWait();
+                    break;
+
+                case "Confirm Password text field empty":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please confirm your password.");
+                    alert.showAndWait();
+                    break;
+
+                case "Passwords do not match":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please make sure your passwords match.");
+                    alert.showAndWait();
+                    break;
+
+                case "Account created":
+                    alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Confirmed!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please login to continue.");
+                    alert.showAndWait();
+                    break;
+
+                case "Account not created":
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR!");
+                    alert.setHeaderText(message);
+                    alert.setContentText("Please try again.");
+                    alert.showAndWait();
+                    break;
+            }
+        });
     }
 }

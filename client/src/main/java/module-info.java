@@ -2,7 +2,8 @@ module client {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
-    requires slf4j.api;
+    requires mongo.java.driver;
+    requires org.slf4j;
 
     opens com.client.login to javafx.fxml;
     exports com.client.login;

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="mongodb.driver.reactivestreams" type="repository">
+    <properties maven-id="org.mongodb:mongodb-driver-reactivestreams:4.9.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/apis/mongodb-driver-reactivestreams-4.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apis/bson-4.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apis/mongodb-driver-core-4.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apis/bson-record-codec-4.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apis/reactive-streams-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/apis/reactor-core-3.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

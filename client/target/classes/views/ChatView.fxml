@@ -89,18 +89,18 @@
                                 <Image url="@../images/settings.png" />
                             </image>
                             <HBox.margin>
-                                <Insets right="30.0" top="30.0" />
+                                <Insets right="30.0" top="20.0" />
                             </HBox.margin>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </ImageView>
-                        <ImageView fitHeight="22.0" fitWidth="21.0" onMousePressed="#closeApplication" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                        <ImageView fitHeight="22.0" fitWidth="21.0" onMouseClicked="#logoutScene" onMousePressed="#logoutScene" pickOnBounds="true" preserveRatio="true" styleClass="button">
                             <image>
                                 <Image url="@../images/close_normal.png" />
                             </image>
                             <HBox.margin>
-                                <Insets right="30.0" top="30.0" />
+                                <Insets right="30.0" top="20.0" />
                             </HBox.margin>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
@@ -110,22 +110,22 @@
                 </HBox>
             </right>
             <left>
-                <HBox prefWidth="259.0" BorderPane.alignment="CENTER">
+                <HBox BorderPane.alignment="CENTER">
                     <children>
                         <ImageView fx:id="userImageView" fitHeight="69.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../images/default.png" />
                             </image>
                             <HBox.margin>
-                                <Insets left="10.0" top="10.0" />
+                                <Insets bottom="5.0" left="10.0" top="5.0" />
                             </HBox.margin>
                         </ImageView>
-                        <VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="5.0">
                             <HBox.margin>
-                                <Insets left="10.0" top="30.0" />
+                                <Insets bottom="5.0" left="10.0" top="5.0" />
                             </HBox.margin>
                             <children>
-                                <Label fx:id="usernameLabel" text="Dominic Heal" textFill="#fa6648">
+                                <Label fx:id="usernameLabel" alignment="CENTER" text="Dominic Heal" textFill="#fa6648">
                                     <font>
                                         <Font name="HelveticaNeue Medium" size="14.0" />
                                     </font>
