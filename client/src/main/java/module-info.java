@@ -4,6 +4,7 @@ module client {
     requires java.desktop;
     requires mongo.java.driver;
     requires org.slf4j;
+    requires json.simple;
 
     opens com.client.login to javafx.fxml;
     exports com.client.login;

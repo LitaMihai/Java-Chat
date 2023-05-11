@@ -46,11 +46,11 @@
             <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Confirm Pass: " GridPane.rowIndex="5" />
             <Button id="connectBtn" fx:id="cancelBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelButtonAction" prefWidth="81.5" stylesheets="@../styles/Login.css" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
-            <PasswordField fx:id="displayNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <Label text="Display Name: " GridPane.rowIndex="6" />
+            <TextField fx:id="displayNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="Defaultview" fitHeight="93" fitWidth="93" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="profileImage" fitHeight="93" fitWidth="93" onMouseClicked="#setProfilePicture" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/default.png" />
                      </image>

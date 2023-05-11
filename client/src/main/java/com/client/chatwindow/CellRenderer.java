@@ -1,5 +1,6 @@
 package com.client.chatwindow;
 
+import com.client.util.Database;
 import com.messages.User;
 import javafx.geometry.Pos;
 import javafx.scene.control.ListCell;
@@ -7,8 +8,11 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+
+import java.io.IOException;
 
 /**
  * A Class for Rendering users images / name on the userlist.
@@ -34,7 +38,19 @@ class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
                     statusImageView.setImage(statusImage);
 
                     ImageView pictureImageView = new ImageView();
-                    Image image = new Image(getClass().getResource("/images/default.png").toString(),50,50,true,true);
+                    pictureImageView.setFitHeight(32);
+                    pictureImageView.setFitWidth(32);
+                    Circle clip = new Circle(32 / 2, 32 / 2, 32 / 2);
+                    pictureImageView.setClip(clip);
+
+                    String email = Database.getEmailFromMongoDB(user.getName()); // Get the email of the person that sends a message
+                    Image image = null;
+
+                    try {
+                        image = new Image(Database.getImageFromMongoDB(email));
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     pictureImageView.setImage(image);
 
                     hBox.getChildren().addAll(statusImageView, pictureImageView, name);

@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderPane" maxWidth="350.0" minWidth="350.0" prefHeight="420.0" prefWidth="350.0" stylesheets="@../styles/Login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.login.LoginController">
    <right>
@@ -38,6 +39,15 @@
             <RowConstraints maxHeight="110.0" minHeight="9.0" prefHeight="11.0" />
          </rowConstraints>
          <children>
+            <StackPane fx:id="lastAccount" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ImageView fx:id="lastAccountPhoto" fitHeight="93" fitWidth="93" onMouseClicked="#connectWithLastAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/default.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
             <Button id="connectBtn" fx:id="registerBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#registerButtonAction" stylesheets="@../styles/Login.css" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets />
@@ -48,20 +58,20 @@
             <TextField fx:id="hostnameTextField" prefWidth="188.0" text="localhost" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <Label text="Port: " textFill="#f89406" GridPane.rowIndex="8" />
             <TextField fx:id="portTextField" prefHeight="13.0" prefWidth="149.0" text="9001" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <Label text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Pass: " GridPane.rowIndex="5" />
-            <Label text="Email: " textFill="#f89406" GridPane.rowIndex="4" />
+            <Label fx:id="titleLabel" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+            <Label fx:id="passLabel" text="Pass: " GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="emailLabel" text="Email: " textFill="#f89406" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
             <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Server Details" textFill="#f89406" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <ImageView fx:id="Defaultview" fitHeight="93" fitWidth="93" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/default.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </StackPane>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
                   <Button id="MinimizedBtn" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="24.0" prefWidth="45.0" stylesheets="@../styles/Login.css">

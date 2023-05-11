@@ -2,6 +2,9 @@ package com.client.login;
 
 import com.client.chatwindow.Listener;
 import com.client.util.Database;
+import com.mongodb.gridfs.GridFS;
+import com.mongodb.gridfs.GridFSDBFile;
+import com.mongodb.gridfs.GridFSInputFile;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -14,17 +17,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -35,9 +44,12 @@ public class RegisterController implements Initializable {
     @FXML private PasswordField confirmPasswordTextField;
     @FXML private TextField displayNameTextField;
     @FXML private BorderPane borderPane;
+    @FXML private ImageView profileImage;
     private double xOffset;
     private double yOffset;
     private static RegisterController instance;
+    private String pathToProfileImage;
+
     Logger logger = LoggerFactory.getLogger(Listener.class);
     public static RegisterController getInstance() {
         return instance;
@@ -62,11 +74,30 @@ public class RegisterController implements Initializable {
         });
     }
 
+    public void setProfilePicture() {
+        FileChooser file = new FileChooser();
+        file.setTitle("Choose a profile image");
+        file.setInitialDirectory(new File(System.getProperty("user.home")));
+        file.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.bmp", "*.jpeg")
+        );
+        File selectedFile = file.showOpenDialog(MainLauncher.getPrimaryStage());
+
+        if(selectedFile != null) {
+            this.pathToProfileImage = selectedFile.getAbsolutePath();
+            this.profileImage.setImage(new Image(selectedFile.toURI().toString()));
+            this.profileImage.setFitWidth(93);
+            this.profileImage.setFitHeight(93);
+            Circle clip = new Circle(93 / 2, 93 / 2, 93 / 2);
+            this.profileImage.setClip(clip);
+        }
+    }
+
     public void cancelButtonAction() {
         logoutScene(); // Back to LoginView
     }
 
-    public void registerButtonAction() {
+    public void registerButtonAction() throws IOException {
         // Checks on text fields
         if(emailTextField.getText().isEmpty()) {
             LoginController.getInstance().showErrorDialog("Email text field empty");
@@ -107,6 +138,7 @@ public class RegisterController implements Initializable {
 
         // Create the account
         if(Database.insertAccount(emailTextField.getText(), passwordTextField.getText(), displayNameTextField.getText())) {
+            Database.saveImageIntoMongoDb(this.pathToProfileImage, emailTextField.getText());
             LoginController.getInstance().showErrorDialog("Account created");
             logger.error("Account created");
             logoutScene(); // Back to LoginView

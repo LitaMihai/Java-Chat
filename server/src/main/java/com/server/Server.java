@@ -8,6 +8,7 @@ import com.messages.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -81,6 +82,9 @@ public class Server {
                                 break;
                             case STATUS:
                                 changeStatus(inputmsg);
+                                break;
+                            case DISCONNECTED:
+                                closeConnections();
                                 break;
                         }
                     }

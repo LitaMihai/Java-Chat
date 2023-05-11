@@ -73,6 +73,7 @@ public class Listener implements Runnable{
                             controller.setUserList(message);
                             break;
                         case DISCONNECTED:
+                            System.out.println(message);
                             controller.setUserList(message);
                             break;
                         case STATUS:

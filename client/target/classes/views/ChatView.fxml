@@ -89,18 +89,18 @@
                                 <Image url="@../images/settings.png" />
                             </image>
                             <HBox.margin>
-                                <Insets right="30.0" top="20.0" />
+                                <Insets right="30.0" top="25.0" />
                             </HBox.margin>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </ImageView>
-                        <ImageView fitHeight="22.0" fitWidth="21.0" onMouseClicked="#logoutScene" onMousePressed="#logoutScene" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                        <ImageView fitHeight="22.0" fitWidth="21.0" onMouseClicked="#closeApplication" pickOnBounds="true" preserveRatio="true" styleClass="button">
                             <image>
                                 <Image url="@../images/close_normal.png" />
                             </image>
                             <HBox.margin>
-                                <Insets right="30.0" top="20.0" />
+                                <Insets right="30.0" top="25.0" />
                             </HBox.margin>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
@@ -110,9 +110,9 @@
                 </HBox>
             </right>
             <left>
-                <HBox BorderPane.alignment="CENTER">
+                <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="79.0" BorderPane.alignment="CENTER">
                     <children>
-                        <ImageView fx:id="userImageView" fitHeight="69.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="userImageView" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../images/default.png" />
                             </image>

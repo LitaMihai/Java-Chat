@@ -9,112 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Fixed voice message recorder and playback.&#10;Voice message is sent to all connected users and is played automatically.">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_reactivestreams.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_mongo_java_driver.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/arc-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/asm-9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/brotli4j-1.7.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/bson-4.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/bson-record-codec-4.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/graal-sdk-22.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jackson-core-2.14.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.annotation-api-2.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.el-api-5.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.enterprise.cdi-api-4.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.enterprise.lang-model-4.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.inject-api-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.interceptor-api-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jakarta.transaction-api-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jboss-logging-3.5.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jboss-logging-annotations-2.2.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jboss-logmanager-embedded-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jboss-threads-3.5.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/jna-5.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/microprofile-config-api-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/microprofile-context-propagation-api-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/microprofile-reactive-streams-operators-api-3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/microprofile-reactive-streams-operators-core-3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mongo-java-driver-3.12.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mongodb-crypt-1.7.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mongodb-driver-core-4.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mongodb-driver-reactivestreams-4.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mongodb-driver-sync-4.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mutiny-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mutiny-reactive-streams-operators-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mutiny-smallrye-context-propagation-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/mutiny-zero-flow-adapters-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/native-osx-x86_64-1.7.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-buffer-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-codec-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-codec-dns-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-codec-haproxy-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-codec-http-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-codec-http2-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-codec-socks-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-common-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-handler-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-handler-proxy-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-resolver-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-resolver-dns-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-transport-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/netty-transport-native-unix-common-4.1.87.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/org-crac-0.1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-arc-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-bootstrap-runner-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-core-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-development-mode-spi-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-fs-util-0.0.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-ide-launcher-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-mongodb-client-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-mutiny-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-mutiny-reactive-streams-operators-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-netty-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-smallrye-context-propagation-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-vertx-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/quarkus-vertx-latebound-mdc-provider-3.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/reactive-streams-1.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/reactor-core-3.5.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/slf4j-api-2.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/slf4j-jboss-logmanager-2.0.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-annotation-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-classloader-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-constraint-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-expression-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-function-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-io-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-os-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-common-vertx-context-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-config-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-config-common-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-config-core-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-context-propagation-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-context-propagation-api-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-context-propagation-storage-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-fault-tolerance-vertx-6.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-mutiny-vertx-core-3.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/smallrye-mutiny-vertx-runtime-3.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/vertx-codegen-4.3.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/vertx-core-4.3.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/vertx-mutiny-generator-3.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis/wildfly-common-1.5.4.Final-format-001.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/views/RegisterView.fxml" afterDir="false" />
+    <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name.">
+      <change afterPath="$PROJECT_DIR$/lastAccount.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/login/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/util/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/LoginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/RegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/RegisterView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/chatwindow/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/client/chatwindow/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/client/login/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/LoginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server$Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server$Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +114,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2839721&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -298,7 +218,13 @@
       <workItem from="1681726842568" duration="5629000" />
       <workItem from="1681735225209" duration="2326000" />
       <workItem from="1682011717460" duration="4606000" />
-      <workItem from="1682941313741" duration="8119000" />
+      <workItem from="1682941313741" duration="8611000" />
+      <workItem from="1682964450266" duration="5713000" />
+      <workItem from="1682970217995" duration="30000" />
+      <workItem from="1683193222455" duration="333000" />
+      <workItem from="1683556053753" duration="13746000" />
+      <workItem from="1683639465705" duration="2303000" />
+      <workItem from="1683829021758" duration="4115000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality.">
       <created>1679216575483</created>
@@ -314,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681633939166</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name.">
+      <created>1682950287030</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682950287030</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +268,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality." />
     <MESSAGE value="Fixed voice message recorder and playback.&#10;Voice message is sent to all connected users and is played automatically." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed voice message recorder and playback.&#10;Voice message is sent to all connected users and is played automatically." />
+    <MESSAGE value="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
