@@ -22,6 +22,7 @@ import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
@@ -32,8 +33,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
-//import javafx.scene.media.MediaPlayer;
-//import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
@@ -106,7 +107,7 @@ public class ChatController implements Initializable {
             @Override
             public HBox call() throws Exception {
                 String email = Database.getEmailFromMongoDB(msg.getName()); // Get the email of the person that sends a message
-                Image image = new Image(Database.getImageFromMongoDB(email));
+                Image image = new Image(Database.getImageFromMongoDB(email)); // Get the image of the person that sends a message
                 ImageView profileImage = new ImageView(image);
                 profileImage.setFitHeight(32);
                 profileImage.setFitWidth(32);
@@ -121,11 +122,13 @@ public class ChatController implements Initializable {
                     VoicePlayback.playAudio(msg.getVoiceMsg());
                 }else {
                     bl6.setText(msg.getName() + ": " + msg.getMsg());
+                    bl6.setWrapText(true);
                 }
 
                 bl6.setBackground(new Background(new BackgroundFill(Color.WHITE,null, null)));
                 HBox x = new HBox();
                 bl6.setBubbleSpec(BubbleSpec.FACE_LEFT_CENTER);
+                x.setAlignment(Pos.CENTER_LEFT);
                 x.getChildren().addAll(profileImage, bl6);
                 logger.debug("ONLINE USERS: " + Integer.toString(msg.getUserList().size()));
                 setOnlineLabel(Integer.toString(msg.getOnlineCount()));
@@ -135,6 +138,7 @@ public class ChatController implements Initializable {
 
         othersMessages.setOnSucceeded(event -> {
             chatPane.getItems().add(othersMessages.getValue());
+            chatPane.scrollTo(chatPane.getItems().size() - 1);
         });
 
         Task<HBox> yourMessages = new Task<HBox>() {
@@ -151,24 +155,32 @@ public class ChatController implements Initializable {
                 if (msg.getType() == MessageType.VOICE){
                     bl6.setGraphic(new ImageView(new Image(getClass().getResource("/images/sound.png").toString())));
                     bl6.setText("Sent a voice message!");
-                    VoicePlayback.playAudio(msg.getVoiceMsg());
+                    bl6.setOnMouseClicked(event -> {
+                        VoicePlayback.playAudio(msg.getVoiceMsg());
+                    });
                 }else {
                     bl6.setText(msg.getMsg());
+                    bl6.setWrapText(true);
                 }
 
-                bl6.setBackground(new Background(new BackgroundFill(Color.LIGHTGREEN,
+                bl6.setBackground(new Background(new BackgroundFill(Color.rgb(116, 199, 181),
                         null, null)));
+
                 HBox x = new HBox();
                 x.setMaxWidth(chatPane.getWidth() - 20);
-                x.setAlignment(Pos.TOP_RIGHT);
+                x.setAlignment(Pos.CENTER_RIGHT);
                 bl6.setBubbleSpec(BubbleSpec.FACE_RIGHT_CENTER);
+
                 x.getChildren().addAll(bl6, profileImage);
 
                 setOnlineLabel(Integer.toString(msg.getOnlineCount()));
                 return x;
             }
         };
-        yourMessages.setOnSucceeded(event -> chatPane.getItems().add(yourMessages.getValue()));
+        yourMessages.setOnSucceeded(event ->{
+            chatPane.getItems().add(yourMessages.getValue());
+            chatPane.scrollTo(chatPane.getItems().size()-1);
+        });
 
         if (msg.getName().equals(usernameLabel.getText())) {
             Thread t2 = new Thread(yourMessages);
@@ -180,6 +192,9 @@ public class ChatController implements Initializable {
             t.start();
         }
     }
+
+
+
     public void setUsernameLabel(String username) {
         this.usernameLabel.setText(username);
     }
@@ -197,6 +212,7 @@ public class ChatController implements Initializable {
             this.userImageView.setImage(profileImage);
             this.userImageView.setFitWidth(69);
             this.userImageView.setFitHeight(69);
+
             Circle clip = new Circle(69 / 2, 69 / 2, 69 / 2);
             this.userImageView.setClip(clip);
 
@@ -210,18 +226,40 @@ public class ChatController implements Initializable {
     }
 
     public void setOnlineLabel(String usercount) {
-        Platform.runLater(() -> onlineCountLabel.setText(usercount));
+        Platform.runLater(() -> {
+            onlineCountLabel.setText(usercount);
+        });
     }
 
     public void setUserList(Message msg) {
         logger.info("setUserList() method Enter");
+
         Platform.runLater(() -> {
             ObservableList<User> users = FXCollections.observableList(msg.getUsers());
+
             userList.setItems(users);
             userList.setCellFactory(new CellRenderer());
             setOnlineLabel(String.valueOf(msg.getUserList().size()));
         });
         logger.info("setUserList() method Exit");
+    }
+
+    public void setUsersStatus(Message msg) {
+        Platform.runLater(() -> {
+            ObservableList<User> users = userList.getItems();
+
+            for (User user : users) {
+
+                if (user.getName().equals(msg.getName())) {
+                    user.setStatus(msg.getStatus());
+
+                    userList.setItems(users);
+                    userList.setCellFactory(new CellRenderer());
+
+                    break;
+                }
+            }
+        });
     }
 
     /* Displays Notification when a user joins */
@@ -240,19 +278,18 @@ public class ChatController implements Initializable {
 
             TrayNotification tray = new TrayNotification();
             tray.setTitle("A new user has joined!");
-            tray.setMessage(msg.getName() + " has joined the JavaFX Chatroom!");
+            tray.setMessage(msg.getName() + " has joined the chatroom!");
             tray.setRectangleFill(Paint.valueOf("#2C3E50"));
             tray.setAnimationType(AnimationType.POPUP);
             tray.setImage(profileImage.getImage());
             tray.showAndDismiss(Duration.seconds(5));
-//            try {
-//                Media hit = new Media(getClass().getResource("/sounds/notification.wav").toString());
-//                MediaPlayer mediaPlayer = new MediaPlayer(hit);
-//                mediaPlayer.play();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-
+            try {
+                Media hit = new Media(getClass().getResource("/sounds/notification.wav").toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(hit);
+                mediaPlayer.play();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         });
     }
 

@@ -2,9 +2,7 @@ package com.client.login;
 
 import com.client.chatwindow.Listener;
 import com.client.util.Database;
-import com.mongodb.gridfs.GridFS;
-import com.mongodb.gridfs.GridFSDBFile;
-import com.mongodb.gridfs.GridFSInputFile;
+import com.client.util.ImageCropperController;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -19,6 +17,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -33,7 +32,6 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -44,15 +42,33 @@ public class RegisterController implements Initializable {
     @FXML private PasswordField confirmPasswordTextField;
     @FXML private TextField displayNameTextField;
     @FXML private BorderPane borderPane;
-    @FXML private ImageView profileImage;
+    @FXML public ImageView profileImage;
+
+    public static Image imageToCrop;
     private double xOffset;
     private double yOffset;
     private static RegisterController instance;
     private String pathToProfileImage;
+    public static Stage stageCrop;
+    private static Image selectedImage;
 
     Logger logger = LoggerFactory.getLogger(Listener.class);
+
+    public RegisterController() {
+        instance = this;
+    }
+
     public static RegisterController getInstance() {
         return instance;
+    }
+
+    public void setCroppedImage(Image image) {
+        this.profileImage.setImage(image);
+        selectedImage = image;
+    }
+
+    public void setPathToCroppedProfileImage(String path) {
+        this.pathToProfileImage = path;
     }
 
     public void logoutScene() {
@@ -74,8 +90,13 @@ public class RegisterController implements Initializable {
         });
     }
 
-    public void setProfilePicture() {
+    public ImageView getImageView() {
+        return this.profileImage;
+    }
+
+    public void setProfilePicture() throws IOException {
         FileChooser file = new FileChooser();
+        ImageCropperController imageCropperController;
         file.setTitle("Choose a profile image");
         file.setInitialDirectory(new File(System.getProperty("user.home")));
         file.getExtensionFilters().addAll(
@@ -84,12 +105,35 @@ public class RegisterController implements Initializable {
         File selectedFile = file.showOpenDialog(MainLauncher.getPrimaryStage());
 
         if(selectedFile != null) {
+            selectedImage = new Image(selectedFile.toURI().toString());
+
+            if(selectedImage.getWidth() > 150 || selectedImage.getHeight() > 150) {
+                // Start Image Cropper
+
+                imageToCrop = selectedImage;
+
+                Platform.runLater(() -> {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/ImageCropperView.fxml"));
+                    Parent window = null;
+                    try {
+                        window = fxmlLoader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    stageCrop = new Stage();
+                    Scene scene = new Scene(window);
+                    stageCrop.setResizable(false);
+                    stageCrop.setScene(scene);
+                    stageCrop.centerOnScreen();
+                    stageCrop.show();
+                });
+            }
             this.pathToProfileImage = selectedFile.getAbsolutePath();
-            this.profileImage.setImage(new Image(selectedFile.toURI().toString()));
-            this.profileImage.setFitWidth(93);
-            this.profileImage.setFitHeight(93);
+            this.profileImage.setImage(selectedImage);
+            profileImage.setFitWidth(93);
+            profileImage.setFitHeight(93);
             Circle clip = new Circle(93 / 2, 93 / 2, 93 / 2);
-            this.profileImage.setClip(clip);
+            profileImage.setClip(clip);
         }
     }
 
@@ -140,7 +184,7 @@ public class RegisterController implements Initializable {
         if(Database.insertAccount(emailTextField.getText(), passwordTextField.getText(), displayNameTextField.getText())) {
             Database.saveImageIntoMongoDb(this.pathToProfileImage, emailTextField.getText());
             LoginController.getInstance().showErrorDialog("Account created");
-            logger.error("Account created");
+            logger.warn("Account created");
             logoutScene(); // Back to LoginView
         }
 
@@ -167,6 +211,29 @@ public class RegisterController implements Initializable {
         borderPane.setOnMouseReleased(event -> {
             borderPane.setCursor(Cursor.DEFAULT);
         });
+
+        emailTextField.setOnKeyPressed(event -> {
+            if(event.getCode() == KeyCode.TAB)
+                passwordTextField.requestFocus();
+        });
+
+        passwordTextField.setOnKeyPressed(event -> {
+            if(event.getCode() == KeyCode.TAB)
+                confirmPasswordTextField.requestFocus();
+        });
+
+        confirmPasswordTextField.setOnKeyPressed(event -> {
+            if(event.getCode() == KeyCode.TAB)
+                displayNameTextField.requestFocus();
+        });
+
+        displayNameTextField.setOnKeyPressed(event -> {
+            if(event.getCode() == KeyCode.TAB)
+                emailTextField.requestFocus();
+        });
+
+        File defaultPhoto = new File("client/src/main/resources/images/default.png");
+        this.pathToProfileImage = defaultPhoto.getAbsolutePath();
 
         int numberOfSquares = 30;
         while (numberOfSquares > 0){

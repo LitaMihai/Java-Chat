@@ -47,8 +47,7 @@ public class Message implements Serializable {
     }
 
     public void setOnlineCount(int onlineCount){
-        //if(onlineCount != 0)
-            this.onlineCount = onlineCount;
+        this.onlineCount = onlineCount;
     }
 
     public ArrayList<User> getUserList(){

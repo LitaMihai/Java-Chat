@@ -2,7 +2,6 @@ package com.traynotifications.animations;
 
 import javafx.util.Duration;
 
-//All tray animations must implement TrayAnimation
 public interface TrayAnimation {
 
     /**

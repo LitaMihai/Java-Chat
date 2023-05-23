@@ -73,11 +73,10 @@ public class Listener implements Runnable{
                             controller.setUserList(message);
                             break;
                         case DISCONNECTED:
-                            System.out.println(message);
                             controller.setUserList(message);
                             break;
                         case STATUS:
-                            controller.setUserList(message);
+                            controller.setUsersStatus(message);
                             break;
                     }
                 }
@@ -95,7 +94,6 @@ public class Listener implements Runnable{
         Message createMessage = new Message();
         createMessage.setName(username);
         createMessage.setType(MessageType.USER);
-        createMessage.setStatus(Status.AWAY);
         createMessage.setMsg(msg);
         oos.writeObject(createMessage);
         oos.flush();
@@ -108,15 +106,11 @@ public class Listener implements Runnable{
         Message createMessage = new Message();
         createMessage.setName(username);
         createMessage.setType(MessageType.VOICE);
-        createMessage.setStatus(Status.AWAY);
         createMessage.setVoiceMsg(audio);
         oos.writeObject(createMessage);
         oos.flush();
     }
 
-    /* This method is used for sending a normal Message
- * @param msg - The message which the user generates
- */
     public static void sendStatusUpdate(Status status) throws IOException {
         Message createMessage = new Message();
         createMessage.setName(username);

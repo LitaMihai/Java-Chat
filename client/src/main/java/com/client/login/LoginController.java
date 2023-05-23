@@ -31,6 +31,7 @@ import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.json.simple.JSONObject;
@@ -83,6 +84,11 @@ public class LoginController implements Initializable {
 
             email = (String) account.get("email");
             username = Database.getName(email); // Get the username from the database
+
+            String password = (String) account.get("password");
+            String hashedPassword = Database.getPassword(email); // Get the hashed password from the database
+            if(!BCrypt.checkpw(password, hashedPassword)) // If the password is incorrect
+                return;
 
             // Connect to the server
             logIn(hostname, port, username);
@@ -421,8 +427,9 @@ public class LoginController implements Initializable {
                     break;
 
                 case "Account created":
-                    alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Confirmed!");
+                    alert.initOwner(MainLauncher.getPrimaryStage());
                     alert.setHeaderText(message);
                     alert.setContentText("Please login to continue.");
                     alert.showAndWait();
@@ -431,6 +438,7 @@ public class LoginController implements Initializable {
                 case "Account not created":
                     alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("ERROR!");
+                    alert.initOwner(MainLauncher.getPrimaryStage());
                     alert.setHeaderText(message);
                     alert.setContentText("Please try again.");
                     alert.showAndWait();

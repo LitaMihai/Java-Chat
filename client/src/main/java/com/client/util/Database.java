@@ -7,6 +7,7 @@ import com.mongodb.gridfs.GridFSInputFile;
 import javafx.scene.image.Image;
 import javafx.scene.shape.Circle;
 import org.bson.Document;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,6 +73,26 @@ public class Database {
         return null;
     }
 
+    public static String getPassword(String email){
+        if(database == null)
+            new Database();
+
+        DBCollection dbCollection = database.getCollection("Accounts");
+
+        DBCursor cursor = dbCollection.find(new BasicDBObject("email", email));
+        try{
+            while(cursor.hasNext()){
+                String hashedPassword = cursor.next().get("password").toString();
+                return hashedPassword;
+            }
+        }
+        finally {
+            cursor.close();
+        }
+
+        return null;
+    }
+
     public static boolean getAccount(String username, String password) {
         if(database == null)
             new Database();
@@ -83,7 +104,7 @@ public class Database {
             while(cursor.hasNext()){
                 String passwordFromDatabase = cursor.next().get("password").toString();
 
-                if(passwordFromDatabase.equals(password))
+                if(BCrypt.checkpw(password, passwordFromDatabase))
                     return true;
                 else
                     return false;
@@ -100,10 +121,11 @@ public class Database {
             new Database();
 
 //        // TO DO -> Password encryption
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
         DBCollection dbCollection = database.getCollection("Accounts");
         BasicDBObject document = new BasicDBObject("email", username);
-        document.append("password", password);
+        document.append("password", hashedPassword);
         document.append("displayName", displayName);
 
         dbCollection.insert(document);

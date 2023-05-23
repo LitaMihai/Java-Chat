@@ -1,6 +1,7 @@
 package com.client.chatwindow;
 
 import com.client.util.Database;
+import com.messages.Status;
 import com.messages.User;
 import javafx.geometry.Pos;
 import javafx.scene.control.ListCell;
@@ -8,16 +9,14 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import java.io.IOException;
 
-/**
- * A Class for Rendering users images / name on the userlist.
- */
-class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
+class CellRenderer implements Callback<ListView<User>,ListCell<User>>{ ;
         @Override
     public ListCell<User> call(ListView<User> p) {
 
@@ -30,12 +29,32 @@ class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
                 setText(null);
                 if (user != null) {
                     HBox hBox = new HBox();
+                    hBox.setSpacing(10);
 
                     Text name = new Text(user.getName());
+                    name.setFill(Paint.valueOf("#98989C"));
 
+                    Image statusImage;
                     ImageView statusImageView = new ImageView();
-                    Image statusImage = new Image(getClass().getResource("/images/online.png").toString(), 16, 16,true,true);
-                    statusImageView.setImage(statusImage);
+
+                    switch(user.getStatus()){
+                        case ONLINE:
+                            statusImage = new Image(getClass().getResource("/images/online.png").toString(), 16, 16,true,true);
+                            statusImageView.setImage(statusImage);
+                            break;
+
+                        case AWAY:
+                            statusImageView = new ImageView();
+                            statusImage = new Image(getClass().getResource("/images/away.png").toString(), 16, 16,true,true);
+                            statusImageView.setImage(statusImage);
+                            break;
+
+                        case BUSY:
+                            statusImageView = new ImageView();
+                            statusImage = new Image(getClass().getResource("/images/busy.png").toString(), 16, 16,true,true);
+                            statusImageView.setImage(statusImage);
+                            break;
+                    }
 
                     ImageView pictureImageView = new ImageView();
                     pictureImageView.setFitHeight(32);

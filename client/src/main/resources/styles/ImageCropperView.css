@@ -1,0 +1,5 @@
+#circle {
+    -fx-fill : transparent;
+    -fx-stroke : #FFFFFF;
+    -fx-stroke-width: 5;
+}

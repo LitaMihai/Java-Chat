@@ -5,13 +5,8 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * @author Dominic
- * @since 16-Oct-16
- * Website: www.dominicheal.com
- * Github: www.github.com/DomHeal
- */
 public class VoicePlayback extends VoiceUtil {
+
     public static void playAudio(byte[] audio) {
         try {
             InputStream input = new ByteArrayInputStream(audio);
@@ -29,8 +24,7 @@ public class VoicePlayback extends VoiceUtil {
                 public void run() {
                     try {
                         int count;
-                        while ((count = ais.read(
-                                buffer, 0, buffer.length)) != -1) {
+                        while (((count = ais.read(buffer, 0, buffer.length)) != -1)) {
                             if (count > 0) {
                                 line.write(buffer, 0, count);
                             }

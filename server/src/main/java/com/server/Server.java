@@ -105,8 +105,7 @@ public class Server {
             msg.setName(user.getName());
             msg.setType(MessageType.STATUS);
             msg.setMsg("");
-            User userObj = names.get(name);
-            userObj.setStatus(inputmsg.getStatus());
+            msg.setStatus(inputmsg.getStatus());
             write(msg);
             return msg;
         }

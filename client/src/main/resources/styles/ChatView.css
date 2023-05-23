@@ -1,24 +1,74 @@
-#chatPane{
-    -fx-background-color: #1B1D23;
+#chatPane {
+    -fx-background-color: #1C1C25;
+    -fx-text-fill: white;
+}
+
+#chatPane .list-cell {
+    -fx-background-color: transparent;
+}
+
+#chatPane .list-cell:hover {
+    -fx-background-color: transparent;
+}
+
+#chatPane .list-cell:filled:selected {
+    -fx-background-color: transparent;
+}
+
+#chatPane .list-cell .text {
+    -fx-fill: #24232D;
+    -fx-font-weight: bold;
+}
+
+#chatPane .list-cell .timestamp {
+    -fx-fill: gray;
+    -fx-font-size: 12px;
 }
 
 #userList{
-    -fx-background-color: #1B1D23;
+    -fx-background-color: #1C1C25;
+    -fx-border-color: #33333E;
+    -fx-border-width: 0 1px 0 0;
+}
+
+#userList .list-cell {
+    -fx-background-color: transparent;
+}
+
+#userList .list-cell:hover {
+    -fx-background-color: transparent;
+}
+
+#userList .list-cell:filled:selected {
+    -fx-background-color: transparent;
+}
+
+#userList .list-cell .text {
+    -fx-fill: #FFFFFF;
+    -fx-font-weight: bold;
 }
 
 #onlineUsersHbox{
-    -fx-background-color: #1B1D23;
+    -fx-background-color: #1C1C25;
+}
+
+#onlineCountLabel{
+    -fx-border-color: #33333E;
+    -fx-border-width: 0 1px 0 0;
 }
 
 #buttonSend{
     -fx-background-color: #5C61ED;
+    -fx-text-fill: #ffffff;
 }
 
 #messageBox{
     -fx-control-inner-background: #2A2D33;
+    -fx-background-color: #2A2D33;
+    -fx-border-radius: 10px;
     -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #ffffff;
+    -fx-border-color: #2A2D33;
+    -fx-background-insets: 0;
 }
 
-#messageHBox{
-    -fx-background-color: -fx-control-inner-background;
-}

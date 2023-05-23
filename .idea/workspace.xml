@@ -9,9 +9,120 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name.">
-      <change afterPath="$PROJECT_DIR$/lastAccount.json" afterDir="false" />
+    <list default="true" id="2d54989f-ffd0-4b87-b2f8-5fbb7757ef86" name="Changes" comment="Done&#10;&#9;Deleted unused function from ChatController&#10;&#9;Added SLF4J to maven&#10;&#9;Removed apis folder&#10;&#9;Implemented easy connection with the last account&#10;&#9;&#9;Modified LoginView&#10;&#9;&#9;A json file is created. This file contains the last connected account&#10;&#9;&#9;At login screen, when a last account exists, the photo linked to the account appears and if you click it, you connect with that account&#10;&#9;Modified RegisterView&#10;&#9;Modified Database.java for using GridFS api&#10;&#9;&#9;DBCollection, DBCursor,…, instead of MongoCollection, MongoCursor,… .&#10;&#9;Using GridFS api, I store a profile picture of each account. The user selects the image at registration. The profile image updates on register and login view and chat view.&#10;&#9;&#10;&#10;Bugs resolved&#10;&#9;Window gets bugged when switching between LoginView and ChatView&#10;&#9;In register view, display name has a password text field instead of a simple text field">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/ImageCropperController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/close_normal_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/settings Background Removed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/images/settings_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ImageCropperView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/views/ImageCropperView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/croppedProfilePicture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-media-18-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-media-18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-console-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-multibyte-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-private-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/decora_sse.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/fxplugins.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/glass.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/glib-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/gstreamer-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/javafx_font.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/javafx_iio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/jfxmedia.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/jfxwebkit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/msvcp140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/msvcp140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/msvcp140_2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/prism_common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/prism_d3d.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/prism_sw.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/vcruntime140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/bin/vcruntime140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.base/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.base/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.base/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.controls/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.controls/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.fxml/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.fxml/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/jpeg_fx.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.graphics/mesa3d.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/directshow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/glib.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/gstreamer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.media/libffi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.swing/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.swing/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/icu_web.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/libxml2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/libxslt.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/legal/javafx.web/webkit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx-swt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.base.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.controls.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.fxml.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.graphics.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.media.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.swing.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/lib/javafx.web.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/javafx-sdk-20/src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/slf4j-jdk14-2.0.7.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/CellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/chatwindow/ChatController.java" afterDir="false" />
@@ -19,22 +130,43 @@
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/login/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/login/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/util/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/util/ResizeHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoicePlayback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoicePlayback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoiceRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoiceRecorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoiceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/client/util/VoiceUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/messages/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/messages/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/BubbleSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/BubbleSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/BubbledLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/messages/bubble/BubbledLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/AnimationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/AnimationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/TrayAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/traynotifications/animations/TrayAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/close_normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/images/close_normal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/dominic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/fxchat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/plug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/sarah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/images/settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/images/settings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/styles/ChatView.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ChatView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/styles/ListViewStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/styles/ListViewStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/views/RegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/views/RegisterView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/chatwindow/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/client/chatwindow/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/client/login/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/util/ResizeHelper$ResizeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/client/util/ResizeHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/images/line.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/styles/ListViewStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/styles/ListViewStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/ChatView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/target/classes/views/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/views/LoginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lastAccount.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/messages/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/messages/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/messages/Message.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server$Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server$Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +181,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -79,13 +211,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2NBHUpo7m0g0XOY0Wuf6HhiosaW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -106,6 +231,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/mihailita/Projects/Java-Chat/client/src/main/resources/views&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -142,7 +268,7 @@
       <recent name="D:\Projects\Java-Chat\client\src\main\resources\com\client.login" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Instance_2">
+  <component name="RunManager" selected="Application.Instance_1">
     <configuration name="Instance_1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.client.login.MainLauncher" />
       <module name="client" />
@@ -224,7 +350,21 @@
       <workItem from="1683193222455" duration="333000" />
       <workItem from="1683556053753" duration="13746000" />
       <workItem from="1683639465705" duration="2303000" />
-      <workItem from="1683829021758" duration="4115000" />
+      <workItem from="1683829021758" duration="4621000" />
+      <workItem from="1683889393722" duration="4745000" />
+      <workItem from="1684145618690" duration="486000" />
+      <workItem from="1684246891733" duration="238000" />
+      <workItem from="1684247215818" duration="36000" />
+      <workItem from="1684247275907" duration="5821000" />
+      <workItem from="1684317851909" duration="6493000" />
+      <workItem from="1684394217217" duration="9914000" />
+      <workItem from="1684412529768" duration="208000" />
+      <workItem from="1684569554817" duration="6825000" />
+      <workItem from="1684578231419" duration="1307000" />
+      <workItem from="1684754906056" duration="4451000" />
+      <workItem from="1684767926257" duration="4508000" />
+      <workItem from="1684790174853" duration="8987000" />
+      <workItem from="1684820929333" duration="6356000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality.">
       <created>1679216575483</created>
@@ -247,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682950287030</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Done&#10;&#9;Deleted unused function from ChatController&#10;&#9;Added SLF4J to maven&#10;&#9;Removed apis folder&#10;&#9;Implemented easy connection with the last account&#10;&#9;&#9;Modified LoginView&#10;&#9;&#9;A json file is created. This file contains the last connected account&#10;&#9;&#9;At login screen, when a last account exists, the photo linked to the account appears and if you click it, you connect with that account&#10;&#9;Modified RegisterView&#10;&#9;Modified Database.java for using GridFS api&#10;&#9;&#9;DBCollection, DBCursor,…, instead of MongoCollection, MongoCursor,… .&#10;&#9;Using GridFS api, I store a profile picture of each account. The user selects the image at registration. The profile image updates on register and login view and chat view.&#10;&#9;&#10;&#10;Bugs resolved&#10;&#9;Window gets bugged when switching between LoginView and ChatView&#10;&#9;In register view, display name has a password text field instead of a simple text field">
+      <created>1683833856794</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683833856794</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,18 +416,24 @@
     <MESSAGE value="Initial commit: Set up the basic structure of the chat application in Java for our faculty project. Implemented the main class. Ready to start building out basic functionality." />
     <MESSAGE value="Fixed voice message recorder and playback.&#10;Voice message is sent to all connected users and is played automatically." />
     <MESSAGE value="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Connection to the database&#10;&#9;Adding account&#10;&#9;Deleting account&#10;&#9;Checking account&#10;&#10;Added account creation&#10;&#9;Account verification&#10;&#9;Error if the entered account details are wrong or the account does not exist&#10;&#9;Confirmation message if the account was created or error message if it was not&#10;&#9;Design for Register View&#10;&#9;Added the Register view to the application&#10;&#10;Bugs resolved&#10;&#9;In chat, instead of email, appears your name." />
+    <MESSAGE value="Done&#10;&#9;Deleted unused function from ChatController&#10;&#9;Added SLF4J to maven&#10;&#9;Removed apis folder&#10;&#9;Implemented easy connection with the last account&#10;&#9;&#9;Modified LoginView&#10;&#9;&#9;A json file is created. This file contains the last connected account&#10;&#9;&#9;At login screen, when a last account exists, the photo linked to the account appears and if you click it, you connect with that account&#10;&#9;Modified RegisterView&#10;&#9;Modified Database.java for using GridFS api&#10;&#9;&#9;DBCollection, DBCursor,…, instead of MongoCollection, MongoCursor,… .&#10;&#9;Using GridFS api, I store a profile picture of each account. The user selects the image at registration. The profile image updates on register and login view and chat view.&#10;&#9;&#10;&#10;Bugs resolved&#10;&#9;Window gets bugged when switching between LoginView and ChatView&#10;&#9;In register view, display name has a password text field instead of a simple text field" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done&#10;&#9;Deleted unused function from ChatController&#10;&#9;Added SLF4J to maven&#10;&#9;Removed apis folder&#10;&#9;Implemented easy connection with the last account&#10;&#9;&#9;Modified LoginView&#10;&#9;&#9;A json file is created. This file contains the last connected account&#10;&#9;&#9;At login screen, when a last account exists, the photo linked to the account appears and if you click it, you connect with that account&#10;&#9;Modified RegisterView&#10;&#9;Modified Database.java for using GridFS api&#10;&#9;&#9;DBCollection, DBCursor,…, instead of MongoCollection, MongoCursor,… .&#10;&#9;Using GridFS api, I store a profile picture of each account. The user selects the image at registration. The profile image updates on register and login view and chat view.&#10;&#9;&#10;&#10;Bugs resolved&#10;&#9;Window gets bugged when switching between LoginView and ChatView&#10;&#9;In register view, display name has a password text field instead of a simple text field" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/com/client/util/VoiceRecorder.java</url>
-          <line>44</line>
+          <line>38</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.messages.Message" memberName="status" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
